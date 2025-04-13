@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment Results</title>
+</head>
+<body>
+    <h1>Risk Assessment Results</h1>
+    {% if final_score %}
+        <p>Final Risk Score: {{ final_score }}</p>
+    {% endif %}
+    <p>Final Risk Level: {{ final_risk }}</p>
+    {% if final_risk_factors %}
+        <h2>Contributing Risk Factors:</h2>
+        <ul>
+            {% for factor in final_risk_factors %}
+                <li>{{ factor }} - Rating: {{ get_rating(factor) }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="/">Assess Another Patient</a>
+</body>
+</html>

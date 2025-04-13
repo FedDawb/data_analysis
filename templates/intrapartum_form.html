@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intrapartum Risk Factors</title>
+</head>
+<body>
+    <h1>Intrapartum Risk Assessment</h1>
+    <form method="POST" action="/intrapartum">
+        <input type="hidden" name="antenatal_score" value="{{ antenatal_score }}">
+        {% for factor in antenatal_risk_factors %}
+            <input type="hidden" name="antenatal_risk_factors" value="{{ factor }}">
+        {% endfor %}
+        <input type="checkbox" id="prolonged_labor" name="prolonged_labor">
+        <label for="prolonged_labor"> Prolonged Labor</label><br>
+        <label for="prom_duration">Duration of PROM (hours):</label><br>
+        <input type="number" id="prom_duration" name="prom_duration"><br><br>
+        <input type="checkbox" id="chorioamnionitis" name="chorioamnionitis">
+        <label for="chorioamnionitis"> Chorioamnionitis</label><br>
+        <input type="checkbox" id="emergency_cs" name="emergency_cs">
+        <label for="emergency_cs"> Emergency C-section</label><br><br>
+        <input type="submit" value="Calculate Risk">
+    </form>
+</body>
+</html>
