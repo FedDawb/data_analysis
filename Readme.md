@@ -10,6 +10,9 @@ This project is a dual-interface tool for assessing and visualizing surgical sit
 - A **Dash dashboard** for visualizing aggregated dummy patient data using charts and statistics.
 
 ---
+<img src="Screenshot 2025-04-13 164606.png">
+
+<img src="Screenshot 2025-04-13 164634.png">
 
 ## 🚀 Getting Started
 
